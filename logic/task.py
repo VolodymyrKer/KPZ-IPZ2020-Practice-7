@@ -58,9 +58,9 @@ def show_undone_task(CURRENT_USER):
     if rows:
         for row in rows:
             print(f"ID: {row[0]}\n"
-                  f"Task name: {row[1]}\n"
+                  f"Task name: {row[3]}\n"
                   f"Task description: {row[2]}\n"
-                  f"Time created: {row[3]}")
+                  f"Time created: {row[1]}")
 
     else:
         display_errors.no_tasks()
@@ -77,9 +77,9 @@ def show_all_task(CURRENT_USER):
             if row[4] == 1:
                 is_task_done = True
             print(f"ID: {row[0]}\n"
-                  f"Task name: {row[1]}\n"
+                  f"Task name:{row[3]} \n"
                   f"Task description: {row[2]}\n"
-                  f"Time created: {row[3]}\n"
+                  f"Time created: {row[1]}\n"
                   f"Task is done: {is_task_done}")
     else:
         display_errors.no_tasks()
